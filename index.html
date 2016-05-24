@@ -17,6 +17,7 @@
 
     <div class="column environment">
       <h2>Environment</h2>
+      <p class="quote">What can I do? How do I do it?</p>
       <div class="block neutral">
         <h3>Physical Affordance</h3>
         <p>Physical action the user performs, e.g. touching, scrolling, right-clicking</p>
@@ -39,10 +40,11 @@
 
     <div class="column before">
       <h2>Before</h2>
+      <p class="quote">What is going to happen?</p>
       <div class="adjacent">
         <div class="block parent">
           <h3>Preview</h3>
-          <p>"What is going to happen as a result of this action?"</p>
+          <p>Gives information on the results of the action, before the action itself is started</p>
           <div class="block">
             <h3>Passive</h3>
             <p>Static elements previewing the outcome of the action, e.g. text labels, icons, graphical elements, continuous animations</p>
@@ -61,31 +63,32 @@
 
     <div class="column during">
       <h2>During</h2>
+      <p class="quote">What is happening right now?</p>
       <div class="adjacent">
         <div class="block parent">
           <h3>Feedback</h3>
-          <p>"What is the current progress of the action?"</p>
+          <p class="wide">Continuously gives information on current progress of the action; different types of feedback can be freely combined</p>
           <div class="adjacent">
             <div class="block parent">
               <h3>User-Controlled</h3>
-              <p>Continous transition between initial and final state, the user controls time during the action</p>
+              <p>User controls time during the action</p>
               <div class="block">
                 <h3>Direct Manipulation</h3>
-                <p>Direct mapping of movement to result, e.g. drag and drop, scrolling, pinch-to-zoom</p>
+                <p>Interaction and result on the same object, e.g. drag and drop, touch scrolling, pinch-to-zoom</p>
               </div>
               <div class="block">
                 <h3>Indirect Manipulation</h3>
-                <p>Indirect mapping of movement to other variables, e.g. color picker slider, pull down to minimize</p>
+                <p>Interaction and result on different objects, e.g. color picker slider, scrollbar</p>
               </div>
             </div>
             <div class="block parent">
               <h3>Autonomous</h3>
-              <p>Continous transition between initial and end state, time is automatic</p>
+              <p>Time is automatic</p>
               <div class="block">
                 <h3>Interactive</h3>
-                <p>User can stop, pause or change the course of the action once it has started, e.g. file transfer with pause and cancel</p>
+                <p>User can stop, pause or change the course of the action once it has started, e.g. file transfer that can be paused</p>
               </div>
-              <div class="block">
+              <div class="block part">
                 <h3>Non-Interactive</h3>
                 <p>Once started, the action cannot be stopped or changed (static animation)</p>
               </div>
@@ -97,27 +100,34 @@
             <h3>No Feedback</h3>
             <p>No transition between initial and final state (hard cut)</p>
           </div>
-          <div class="block neutral">
-            <h3>Partly Opaque</h3>
-            <p>Only some parts of the action are invisible or uncontrollable, e.g. hard cut reload after pull to refresh</p>
-          </div>
         </div>
       </div>
-
     </div>
 
     <div class="column after">
       <h2>After</h2>
-      <div class="adjacent">
+      <p class="quote">What happened? How do I go back?</p>
+      <div class="column">
+        <div class="adjacent">
+          <div class="block">
+            <h3>Feedback</h3>
+            <p>After the action, the consequences are clearly visible, e.g. a menu is open, the screen is locked, a file is deleted</p>
+          </div>
+          <div class="block no">
+            <h3>No Feedback</h3>
+            <p>After the action it's not clear what exactly the effect was, e.g. copying to clipboard</p>
+          </div>
+        </div>
+        <div class="adjacent">
         <div class="block parent">
           <h3>Reversibility</h3>
-          <p>"How do I go back?"</p>
+          <p>Reversing the effects of the action is possible and relatively convenient</p>
           <div class="block">
-            <h3>Intuitive</h3>
+            <h3>Inverse Action</h3>
             <p>Opposite of the action will return system to its previous state, e.g. scrolling back, moving a slider to its previous value</p>
           </div>
-          <div class="block">
-            <h3>Non-Intuitive</h3>
+          <div class="block part">
+            <h3>Unrelated Action</h3>
             <p>Different action enables returning to the previous state, e.g. back/undo button</p>
           </div>
         </div>
@@ -125,6 +135,7 @@
           <h3>No Reversibility</h3>
           <p>Not reversible without considerable effort or additional knowledge, e.g. deleting a file after creating it</p>
         </div>
+      </div>
       </div>
     </div>
 

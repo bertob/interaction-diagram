@@ -10,26 +10,59 @@ html, body {
   font-size: 11px;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.4
+  line-height: 1.4;
 }
 body {
 	background-color: #fff;
+}
+.column h2 {
+  margin-top: 0;
+  margin-bottom: 0.2em;
 }
 div, h3, p {
   margin: 0;
 }
 h3 {
-  font-weight: 600;  
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.2em;
+}
+.quote {
+  margin: 0.4em 0 1em 0;
+  font-style: italic;
+  height: 3em;
+}
+.video {
+  height: 480px;
+  width: 270px;
+  margin: 0.5rem;
 }
 
+
+/* INFO */
+.info {
+  margin: 1.5rem 0.5rem 1rem;
+  max-width: 60em;
+}
+.info h1 {
+  margin-bottom: 0.2em;
+}
+.info p {
+  font-size: 1.3em;
+}
+
+/* DIAGRAM */
 .container {
   display: flex;
 }
 .column {
   margin: 0.5em;
 }
-.column:last-child {
+.column:ld {
   margin-right: 0;
+}
+.column:first-of-type:last-of-type {
+  margin: 0;
 }
 .column > .block {
   margin-top: 0;
@@ -60,7 +93,16 @@ h3 {
 .block.no {
   background-color: #FFDAC5;
 }
+.block.part {
+  background-color: #F9FFCA;
+}
 .block h3, .block p {
+  max-width: 12em;
+}
+p.wide {
+  max-width: 27em;
+}
+p.narrow {
   max-width: 12em;
 }
 .adjacent > .block {
@@ -76,6 +118,9 @@ h3 {
 .parent > .adjacent {
   margin-top: 0.5em;
 }
-.block:last-child {
+.column > .adjacent:not(last-of-type) {
+  margin-bottom: 0.5em;
+}
+.block:last-of-type {
   margin-bottom: 0;
 }
