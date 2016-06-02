@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagram</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fonts/fira.css">
+</head>
+
+<body>
+
+  <div class="diagram-container">
+
+    <div class="column environment">
+      <h2>Environment</h2>
+      <p class="quote">What can i do?<br>How do I do it?</p>
+      <div class="block neutral">
+        <h3>Physical Affordance</h3>
+        <p>Physical action the user performs, e.g. touching, scrolling, right-clicking</p>
+      </div>
+      <div class="block neutral">
+        <h3>System Action</h3>
+        <p>System response to the physical action, e.g. a menu opens, the zoom level changes, a list item is added</p>
+      </div>
+      <div class="adjacent">
+        <div class="block">
+          <h3>Action Presentation</h3>
+          <p>How affordance and system action are presented to the user, e.g. a scrollbar indicates scrollability, a blinking cursor the possibility of text input</p>
+        </div>
+        <div class="block no">
+          <h3>No Action Presentation</h3>
+          <p>Availability of the action is not made explicit in the interface, e.g. keyboard shortcuts</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column before">
+      <h2>Before</h2>
+      <p class="quote">What is going to happen?</p>
+      <div class="adjacent">
+        <div class="block parent">
+          <h3>Preview</h3>
+          <p>Gives information on the results of the action, before the action itself is started</p>
+          <div class="block">
+            <h3>Passive</h3>
+            <p>Static elements previewing the outcome of the action, e.g. text labels, icons, graphical elements, continuous animations</p>
+          </div>
+          <div class="block">
+            <h3>Active</h3>
+            <p>User-triggered elements previewing the outcome of the action, e.g. Alt text, hovercards, user-triggered animations</p>
+          </div>
+        </div>
+        <div class="block no">
+          <h3>No Preview</h3>
+          <p>No way to know what will happen without triggering the action, e.g. clicking an icon with unclear meaning and no description</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column during">
+      <h2>During</h2>
+      <p class="quote">What is happening right now?</p>
+      <div class="adjacent">
+        <div class="block parent">
+          <h3>Feedback</h3>
+          <p class="wide">Continuously gives information on current progress of the action; different types of feedback can be freely combined</p>
+          <div class="adjacent">
+            <div class="block parent">
+              <h3>User-Controlled</h3>
+              <p>User controls time during the action, making it reversible</p>
+              <div class="block">
+                <h3>Direct Manipulation</h3>
+                <p>Interaction and result on the same object, e.g. drag and drop, touch scrolling, pinch-to-zoom</p>
+              </div>
+              <div class="block">
+                <h3>Indirect Manipulation</h3>
+                <p>Interaction and result on different objects, e.g. color picker slider, scrollbar</p>
+              </div>
+            </div>
+            <div class="block parent">
+              <h3>Autonomous</h3>
+              <p>Time is automatic</p>
+              <div class="block">
+                <h3>Interactive</h3>
+                <p>User can stop, pause, or change the course of the action once it has started, e.g. file transfer that can be paused</p>
+              </div>
+              <div class="block">
+                <h3>Non-Interactive</h3>
+                <p>User cannot influence or change the feedback e.g. static animation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="block no">
+            <h3>No Feedback</h3>
+            <p>No transition between initial and final state (hard cut)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column after">
+      <h2>After</h2>
+      <p class="quote">What happned?<br>How do I go back?</p>
+      <div class="column">
+        <div class="adjacent">
+          <div class="block">
+            <h3>Feedback</h3>
+            <p>After the action, the consequences are clearly visible, e.g. a menu is open, the screen is locked, a file is deleted</p>
+          </div>
+          <div class="block no">
+            <h3>No Feedback</h3>
+            <p>After the action it's not clear what exactly the effect was, e.g. copying to clipboard</p>
+          </div>
+        </div>
+        <div class="adjacent">
+        <div class="block parent">
+          <h3>Reversibility</h3>
+          <p>Effects of the action can be reversed with little effort</p>
+          <div class="block">
+            <h3>Inverse Action</h3>
+            <p>Opposite of the action will return system to its previous state, e.g. scrolling back, moving a slider to its previous value</p>
+          </div>
+          <div class="block">
+            <h3>Unrelated Action</h3>
+            <p>Different action enables returning to the previous state, e.g. back/undo button</p>
+          </div>
+        </div>
+        <div class="block no">
+          <h3>No Reversibility</h3>
+          <p>Not reversible without considerable effort or additional knowledge, e.g. deleting a file after creating it</p>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

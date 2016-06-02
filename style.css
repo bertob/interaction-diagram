@@ -7,10 +7,10 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-size: 11px;
+  font-size: 16px;
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 body {
 	background-color: #fff;
@@ -19,13 +19,22 @@ body {
   margin-top: 0;
   margin-bottom: 0.2em;
 }
-div, h3, p {
+div,
+.diagram-container h3,
+.diagram-container p,
+.info p {
   margin: 0;
 }
-h3 {
+.diagram-container {
+  line-height: 1.4;
+}
+.diagram-container h3 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0.2em;
+}
+.diagram-name {
+  margin-top: 0;
 }
 .quote {
   margin: 0.4em 0 1em 0;
@@ -33,27 +42,45 @@ h3 {
   height: 3em;
 }
 .video {
-  height: 480px;
-  width: 270px;
+  height: 410px;
+  width: 230px;
   margin: 0.5rem;
 }
+.video.desktop {
+  width: 430px;
+  height: 355px;
+}
 
+/* ARTICLE LAYOUT */
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+.diagram-embed {
+  transform: translateX(-130px);
+  margin: 1em 0;
+  border: none;
+  box-shadow: 0 4px 18px rgba(0,0,0, 0.2);
+}
 
 /* INFO */
 .info {
-  margin: 1.5rem 0.5rem 1rem;
+  margin: 0.5rem;
   max-width: 60em;
 }
 .info h1 {
-  margin-bottom: 0.2em;
+  margin-bottom: 0;
+  font-size: 1.2em;
 }
 .info p {
-  font-size: 1.3em;
+  font-size: 1em;
 }
 
 /* DIAGRAM */
-.container {
+.diagram-container {
   display: flex;
+  font-size: 11px;
+  font-family: "Fira Sans", sans-serif;
 }
 .column {
   margin: 0.5em;
@@ -93,9 +120,6 @@ h3 {
 .block.no {
   background-color: #FFDAC5;
 }
-.block.part {
-  background-color: #F9FFCA;
-}
 .block h3, .block p {
   max-width: 12em;
 }
@@ -123,4 +147,13 @@ p.narrow {
 }
 .block:last-of-type {
   margin-bottom: 0;
+}
+
+.adjacent-videos {
+  display: flex;
+  justify-content: center;
+}
+.adjacent-videos .video {
+  height: 320px;
+  width: auto;
 }
