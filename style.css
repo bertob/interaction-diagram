@@ -21,7 +21,7 @@ body {
 }
 div,
 .diagram-container h3,
-.diagram-container p,
+.diagram-container p:not(.quote),
 .info p {
   margin: 0;
 }
@@ -37,9 +37,8 @@ div,
   margin-top: 0;
 }
 .quote {
-  margin: 0.4em 0 1em 0;
+  margin: 1em 0 0.5em 0;
   font-style: italic;
-  height: 3em;
 }
 .video {
   height: 410px;
@@ -61,6 +60,9 @@ div,
   margin: 1em 0;
   border: none;
   box-shadow: 0 4px 18px rgba(0,0,0, 0.2);
+}
+.diagram-container {
+  margin: 0 auto;
 }
 
 /* INFO */
@@ -85,7 +87,10 @@ div,
 .column {
   margin: 0.5em;
 }
-.column:ld {
+.parent .column {
+  color: blue;
+}
+.column:last-child {
   margin-right: 0;
 }
 .column:first-of-type:last-of-type {
@@ -99,6 +104,9 @@ div,
   padding: 0;
   display: flex;
   align-items: flex-start;
+}
+.vertical-group > .block:first-child {
+  margin-top: 0;
 }
 .block {
   width: 12em;
@@ -124,7 +132,7 @@ div,
   max-width: 12em;
 }
 p.wide {
-  max-width: 27em;
+  max-width: 25em;
 }
 p.narrow {
   max-width: 12em;

@@ -17,7 +17,7 @@
 
     <div class="column environment">
       <h2>Environment</h2>
-      <p class="quote">What can i do?<br>How do I do it?</p>
+      <p class="quote">What can i do?</p>
       <div class="block neutral">
         <h3>Physical Affordance</h3>
         <p>Physical action the user performs, e.g. touching, scrolling, right-clicking</p>
@@ -26,6 +26,7 @@
         <h3>System Action</h3>
         <p>System response to the physical action, e.g. a menu opens, the zoom level changes, a list item is added</p>
       </div>
+      <p class="quote">How do I do it?</p>
       <div class="adjacent">
         <div class="block">
           <h3>Action Presentation</h3>
@@ -63,15 +64,25 @@
 
     <div class="column during">
       <h2>During</h2>
-      <p class="quote">What is happening right now?</p>
+      <p class="quote">What is happening now?</p>
       <div class="adjacent">
         <div class="block parent">
           <h3>Feedback</h3>
           <p class="wide">Continuously gives information on current progress of the action; different types of feedback can be freely combined</p>
           <div class="adjacent">
+            <div class="vertical-group">
+              <div class="block">
+                <h3>Confirmatory</h3>
+                <p>Confirms user input, e.g. click sounds on touch keyboard, Material ink reaction</p>
+              </div>
+              <div class="block">
+                <h3>Autonomous</h3>
+                <p>Action progresses autonomously, e.g. animation, progress bar</p>
+              </div>
+            </div>
             <div class="block parent">
               <h3>User-Controlled</h3>
-              <p>User controls time during the action, making it reversible</p>
+              <p>User controls the progress of the action, making it reversible</p>
               <div class="block">
                 <h3>Direct Manipulation</h3>
                 <p>Interaction and result on the same object, e.g. drag and drop, touch scrolling, pinch-to-zoom</p>
@@ -81,24 +92,12 @@
                 <p>Interaction and result on different objects, e.g. color picker slider, scrollbar</p>
               </div>
             </div>
-            <div class="block parent">
-              <h3>Autonomous</h3>
-              <p>Time is automatic</p>
-              <div class="block">
-                <h3>Interactive</h3>
-                <p>User can stop, pause, or change the course of the action once it has started, e.g. file transfer that can be paused</p>
-              </div>
-              <div class="block">
-                <h3>Non-Interactive</h3>
-                <p>User cannot influence or change the feedback e.g. static animation</p>
-              </div>
-            </div>
           </div>
         </div>
         <div class="column">
           <div class="block no">
             <h3>No Feedback</h3>
-            <p>No transition between initial and final state (hard cut)</p>
+            <p>No information on status/progress between initial and final state (hard cut)</p>
           </div>
         </div>
       </div>
@@ -106,36 +105,37 @@
 
     <div class="column after">
       <h2>After</h2>
-      <p class="quote">What happned?<br>How do I go back?</p>
+      <p class="quote">What happened?</p>
       <div class="column">
         <div class="adjacent">
           <div class="block">
-            <h3>Feedback</h3>
+            <h3>Response</h3>
             <p>After the action, the consequences are clearly visible, e.g. a menu is open, the screen is locked, a file is deleted</p>
           </div>
           <div class="block no">
-            <h3>No Feedback</h3>
+            <h3>No Response</h3>
             <p>After the action it's not clear what exactly the effect was, e.g. copying to clipboard</p>
           </div>
         </div>
+        <p class="quote">How do I go back?</p>
         <div class="adjacent">
-        <div class="block parent">
-          <h3>Reversibility</h3>
-          <p>Effects of the action can be reversed with little effort</p>
-          <div class="block">
-            <h3>Inverse Action</h3>
-            <p>Opposite of the action will return system to its previous state, e.g. scrolling back, moving a slider to its previous value</p>
+          <div class="block parent">
+            <h3>Reversibility</h3>
+            <p>Effects of the action can be reversed with little effort</p>
+            <div class="block">
+              <h3>Inverse Action</h3>
+              <p>Opposite of the action will return system to its previous state, e.g. scrolling back, moving a slider to its previous value</p>
+            </div>
+            <div class="block">
+              <h3>Unrelated Action</h3>
+              <p>Different action enables returning to the previous state, e.g. back/undo button</p>
+            </div>
           </div>
-          <div class="block">
-            <h3>Unrelated Action</h3>
-            <p>Different action enables returning to the previous state, e.g. back/undo button</p>
+          <div class="block no">
+            <h3>No Reversibility</h3>
+            <p>Not reversible without considerable effort or additional knowledge, e.g. deleting a file after creating it</p>
           </div>
         </div>
-        <div class="block no">
-          <h3>No Reversibility</h3>
-          <p>Not reversible without considerable effort or additional knowledge, e.g. deleting a file after creating it</p>
-        </div>
-      </div>
       </div>
     </div>
 
